@@ -31,7 +31,7 @@ class NonStrictCharField(serializers.CharField):
             return "True"
         elif value is False:
             return "False"
-        return super().to_internal_value(value)
+        return super(NonStrictCharField, self).to_internal_value(value)
 
 
 class FilterFieldSerializer(serializers.ModelSerializer):
